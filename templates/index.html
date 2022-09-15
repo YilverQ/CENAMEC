@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% from "_nav.html" import nav__logout %}
+{% from "_nav.html" import nav__ministerio %}
+
+{% block nav %}
+	{{ nav__ministerio() }}
+	{{ nav__logout() }}
+{% endblock %}

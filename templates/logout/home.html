@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+{% from "macro/_nav.html" import nav__logout %}
+{% from "macro/_nav.html" import nav__ministerio %}
+
+
+{% block styles %}	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/logout/home.css') }}">
+{% endblock %}
+
+
+{% block nav %}
+	{{ nav__ministerio() }}
+	{{ nav__logout() }}
+{% endblock %}
+
+{% block content %}
+	<!--Header-->
+	<div class="header__background">
+	<header class="header">
+		<img class="header__img" src="{{ url_for('static', filename='img/logout/header_icon.png') }}">
+		<div class="header__information">
+			<h2 class="header__title">¡La forma divertida, efectiva y libre de aprender ciencias!</h2>
+			<ul class="header__bottons">
+				<a href="/singup"><li class="header__logoutItem header__logoutItem--contrast">Empieza ahora</li></a>
+				<a href="/login"><li class="header__logoutItem">Ya tengo una cuenta</li></a>
+			</ul>
+		</div>
+	</header>
+	<div class="header__ciencias">
+		<ul class="header__cienciasContainer">
+			<li class="header__cienciaItem"><i class="fa-solid fa-seedling"></i>Biología</li>
+			<li class="header__cienciaItem"><i class="fa-solid fa-atom"></i>Física</li>
+			<li class="header__cienciaItem"><i class="fa-solid fa-flask"></i>Química</li>
+		</ul>
+	</div>
+	</div>
+
+	<!--Container-->
+	<div class="container">
+		<!--Information-->
+		<div class="seccion">
+			<!--Information-->
+			<div class="tab">
+				<img class="tab__img" src="{{ url_for('static', filename='img/logout/boy.png') }}">
+				<div class="tab__information">
+					<h2 class="tab__title">La forma divertida para aprender ciencia</h2>
+					<p class="tab__description">¡Aprender con Duolingo es divertido y los estudios demuestran que funciona! Con nuestras lecciones cortas ganarás puntos y accederás a nuevos niveles, todo mientras desarrollas tus capacidades comunicativas en la vida real.</p>
+				</div>
+			</div>
+		</div>
+		<div class="seccion">
+			<!--Information-->
+			<div class="love-middle">
+				<h2 class="love-middle__titleMain">Por qué te encantará aprender con nosotros</h2>
+				<div class="love-middle__information">
+					<h3 class="love-middle__title"><i class="fa-solid fa-fire"></i>Efectivo y eficiente</h3>
+					<p class="love-middle__description">Nuestros cursos enseñan a leer, escuchar y hablar en otro idioma de forma efectiva y eficiente. ¿Ya viste nuestros estudios más recientes?</p>
+				</div>
+				<div class="love-middle__information">
+					<h3 class="love-middle__title"><i class="fa-solid fa-circle-check"></i>Examenes sencillos</h3>
+					<p class="love-middle__description">Al combinar lo mejor de la inteligencia artificial y las ciencias de idiomas, las lecciones se adaptan a tu desempeño para ayudarte a aprender al nivel adecuado y a tu propio ritmo.</p>
+				</div>
+				<div class="love-middle__information">
+					<h3 class="love-middle__title"><i class="fa-solid fa-person-running"></i>Mantente motivado</h3>
+					<p class="love-middle__description">Al sentirse como un juego y ofrecerte desafíos divertidos, hacemos que sea fácil formar un hábito de aprendizaje de idiomas. Además, siempre contarás con el apoyo y los recordatorios de nuestra amistosa mascota, Duo, el búho.</p>
+				</div>
+				<div class="love-middle__information">
+					<h3 class="love-middle__title"><i class="fa-solid fa-face-laugh-beam"></i>¡Diviértete!</h3>
+					<p class="love-middle__description">¡El aprendizaje puede ser efectivo y divertido a la vez! Desarrolla tus habilidades cada día con ejercicios entretenidos y personajes entrañables.</p>
+				</div>
+				<img class="love-middle__img" src="{{ url_for('static', filename='img/logout/love.png') }}">
+			</div>
+		</div>
+		<div class="seccion">
+			<!--Information-->
+			<div class="tab tab--reverse">
+				<img class="tab__img tab__img--reverse" src="{{ url_for('static', filename='img/logout/conocimiento.png') }}">
+				<div class="tab__information">
+					<h2 class="tab__title">Conocimiento para el día a día</h2>
+					<p class="tab__description">¡Aprender con Duolingo es divertido y los estudios demuestran que funciona! Con nuestras lecciones cortas ganarás puntos y accederás a nuevos niveles, todo mientras desarrollas tus capacidades comunicativas en la vida real.</p>
+				</div>
+			</div>
+		</div>
+		<div class="seccion">
+			<!--Information-->
+			<div class="tab">
+				<img class="tab__img" src="{{ url_for('static', filename='img/logout/time.png') }}">
+				<div class="tab__information">
+					<h2 class="tab__title">Aprende a cualquier hora, en cualquier lugar</h2>
+					<p class="tab__description">¡Aprender con Duolingo es divertido y los estudios demuestran que funciona! Con nuestras lecciones cortas ganarás puntos y accederás a nuevos niveles, todo mientras desarrollas tus capacidades comunicativas en la vida real.</p>
+				</div>
+			</div>
+		</div>
+		<div class="seccion">
+			<!--Information-->
+			<div class="tab">
+				<img class="tab__img tab__img--reverse" src="{{ url_for('static', filename='img/logout/certificado.png') }}">
+				<div class="tab__information">
+					<h2 class="tab__title">Obtén un certificado</h2>
+					<p class="tab__description">¡Aprender con Duolingo es divertido y los estudios demuestran que funciona! Con nuestras lecciones cortas ganarás puntos y accederás a nuevos niveles, todo mientras desarrollas tus capacidades comunicativas en la vida real.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer></footer>
+{% endblock %}
+
+
+{% block scripts %}
+	<script type="module" src="{{ url_for('static', filename='js/logout/navItemSelected.js') }}"></script>
+{% endblock %}

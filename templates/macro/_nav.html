@@ -1,0 +1,35 @@
+{% macro nav__ministerio() %}
+  <div class="nav_ministerio">
+    <div class="nav_ministerio__gobierno">
+      <img src="{{ url_for('static', filename='img/bandera.png') }}" class="nav_ministerio__bandera">
+      <p class="nav_ministerio__p">Gobierno <span class="nav_ministerio__bold">Bolivariano</span> de Venezuela</p>
+    </div>
+    <a href="http://me.gob.ve/">
+      <p class="nav_ministerio__p">Ministerio del Poder Popular para la <span class="nav_ministerio__bold">Educación</span></p>
+    </a>
+  </div>
+{% endmacro %}
+
+{% macro nav__logout() %}
+  <nav class="nav">
+    <a href="/" class="nav__home">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" class="nav__logo">
+      <h1 class="nav__title">CENAMEC</h1>
+    </a>
+    <ul class="nav__menu">
+      <a href="/"><li class="nav__item"><i class="fa-solid fa-house"></i><p>Inicio</p></li></a>
+      <a href="/login"><li class="nav__item"><i class="fa-solid fa-arrow-right-to-bracket"></i><p>Ingresar</p></li></a>
+      <a href="/singup"><li class="nav__item"><i class="fa-solid fa-user-plus"></i><p>Registrar</p></li></a>
+    </ul>
+  </nav>
+{% endmacro %}
+
+{% macro nav__user(user) %}
+  <nav class="nav">
+    <a href="/{{ aprender }}"><img src="{{ url_for('static', filename='img/logo.png') }}"><h1 class="nav__title">Aprender</h1></a>
+    <ul class="nav__menu">
+      <a href="/exit"><li class="nav__item">Perfil</li></a>
+      <a href="/exit"><li class="nav__item">Salir</li></a>
+    </ul>
+  </nav>
+{% endmacro %}

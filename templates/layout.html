@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Metas-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Title-->
+	<title>{{ data["title"].title() }} - CENAMEC</title>
+
+	<!--Estilos importados-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/normalize.css') }}">
+
+	<!--Mis estilos-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+	{% block styles %}	
+	{% endblock %}
+	
+	<!--Favicon-->
+	<link rel="icon" href="{{ url_for('static', filename='img/favicon.jpeg') }}">
+
+	<!--Fuentes-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Quicksand&display=swap" rel="stylesheet"> 
+
+	<!--Fuentes de Fontawesome-->
+	<script src="https://kit.fontawesome.com/9d5a264107.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!--Menú de navegación-->
+	{% block nav %}
+	{% endblock %}
+
+
+	<!--Header-->
+	{% block header %}
+	{% endblock %}
+
+
+	<!--Contenedor-->
+	{% block content %}
+	{% endblock %}
+
+
+	<!--Scripts-->
+	<!--
+	<script type="text/javascript" src="{{ url_for('static', filename='js/message.js') }}"></script>
+	<script type="module" src="{{ url_for('static', filename='js/renderHTML.js') }}"></script>
+	-->
+	{% block scripts %}
+	{% endblock %}
+</body>
+</html>
